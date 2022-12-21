@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Relatório Puericultura</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer type='module' src="../assets/scripts/relatorios/render-enfermeiros.js"></script>
+  </head>
+  <body>    
+
+    <!-----------------------------NAVBAR--------------------->
+    <nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="" width="112" height="28">
+      <h1 class="title">geind</h1>
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item">
+        Home
+      </a>
+
+      <a class="navbar-item">
+        Equipe
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Relatórios
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            teste
+          </a>
+          <a class="navbar-item">
+            teste
+          </a>
+          <a class="navbar-item">
+            teste
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item">
+            teste
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-light">
+            Acesso Interno
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    <!------------------------------------------------------------------------>
+
+<section class=""></section>
+<section class="hero is-link">
+  <div class="hero-body">
+    <p class="title">
+      Relatório de Consultas Puericultura - ESUS/PEC
+    </p>
+    <p class="subtitle">
+      pequena explicação
+    </p>
+  </div>
+</section>
+    <!--BUSCADOR -->
+  <div class="section is-small">
+    <div class="container is-max-desktop">
+      <div class='columns'>
+        
+        <!--BUSCADOR POR DATA-->
+        <div class="column block is-one-quarter box">
+          <h1>Data inicial</h1>
+          <input class="input block" id="data-inicial" type="text" placeholder="20220101">
+        </div>
+        <div class="column is-one-quarter box ml-2 mr-2">
+          <h1>Data final</h1>
+          <input class="input block" id="data-final" type="text" placeholder="20220131">
+        </div>
+          <div class="control column">
+            <button class="button is-link mt-5 mb-1" type="submit" id="botao-enviar">Enviar</button>
+        </div>
+      
+      </div>
+      </div>
+    </div>   
+    <!--FIM DO BUSCADOR -->
+    <div class="columns is-mobile is-centered">
+      <h1 class="content is-large" id="nome-relatorio"></h1>
+    </div>
+    <!--TABELA-->
+    <div class="content container is-max-desktop">    
+    <table class='table is-bordered is-striped is-narrow is-hoverable is-fullwidth'>
+      <thead id="createTable">
+      </thead>
+      <tbody id="render">
+      </tbody>
+    </table>
+  </div>
+  <!--FIM DA TABELA-->
+
+
+
+
+  <div id="modal-js-example" class="modal">
+    <div class="modal-background"></div>
+  
+    <div class="modal-content">
+      <div class="box">
+        <p id="modal-error-message">DEU ERRO</p>
+        <!-- Your content -->
+      </div>
+    </div>
+  
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+  </body>
+</html>
